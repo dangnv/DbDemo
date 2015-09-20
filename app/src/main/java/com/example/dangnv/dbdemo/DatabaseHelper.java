@@ -42,6 +42,8 @@ public class DatabaseHelper  extends SQLiteOpenHelper{
         Cursor cur = this.getReadableDatabase().rawQuery(sqlString, null);
         cur.moveToFirst();
         //Doc photo ra
+        
+        //hihihihihihi
         return null;
     }
 }
