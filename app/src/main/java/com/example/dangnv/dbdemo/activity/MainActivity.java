@@ -1,7 +1,7 @@
 package com.example.dangnv.dbdemo.activity;
 
-import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 
@@ -10,13 +10,10 @@ import com.example.dangnv.dbdemo.R;
 
 public class MainActivity extends AppCompatActivity {
 
-    DatabaseHelper databaseHelper;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        databaseHelper = new DatabaseHelper(this);
     }
 
     @Override
@@ -32,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
-
+        //hoang anh tuan
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
             return true;
