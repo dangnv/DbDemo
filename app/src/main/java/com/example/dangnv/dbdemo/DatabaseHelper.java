@@ -1,8 +1,11 @@
 package com.example.dangnv.dbdemo;
 
 import android.content.Context;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+
+import java.util.ArrayList;
 
 /**
  * Created by dangnv on 9/20/15.
@@ -32,5 +35,13 @@ public class DatabaseHelper  extends SQLiteOpenHelper{
     @Override
     public void onDowngrade(SQLiteDatabase db, int oldVersion, int newVersion) {
         super.onDowngrade(db, oldVersion, newVersion);
+    }
+
+    public ArrayList getAllPhotos(SQLiteDatabase db) {
+        String sqlString = "select * from " + Photo.PhotoTable.NAME;
+        Cursor cur = this.getReadableDatabase().rawQuery(sqlString, null);
+        cur.moveToFirst();
+        //Doc photo ra
+        return null;
     }
 }
