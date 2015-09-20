@@ -1,16 +1,22 @@
-package com.example.dangnv.dbdemo;
+package com.example.dangnv.dbdemo.activity;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import com.example.dangnv.dbdemo.DatabaseHelper;
+import com.example.dangnv.dbdemo.R;
+
 public class MainActivity extends AppCompatActivity {
+
+    DatabaseHelper databaseHelper;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        databaseHelper = new DatabaseHelper(this);
     }
 
     @Override
